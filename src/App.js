@@ -76,13 +76,21 @@ function App() {
 
   return (
     <div className="App">
-      <nav>
-        {/* <h5>This is my porfilio!</h5> */}
+
+      <header className="App-header">
+        <div className="App-header-title">
+          Newfoundlandle
+        </div>
+        <HowToButton />
+      </header>
+
+      {/* <nav>
         <HowToButton />
         <h1>Newfoundlandle</h1>
 
         <h3>Know a 5-letter NL word? Send it to: Newfoundlandle@gmail.com</h3>
-      </nav>
+      </nav> */}
+
       <AppContext.Provider
         value={{
           board,
@@ -105,6 +113,7 @@ function App() {
           {gameOver.gameOver ? <GameOver /> : <Keyboard />}
         </div>
         <footer>
+          <h3>Know a 5-letter NL word? Send it to: Newfoundlandle@gmail.com</h3>
           <h4 id="portfolio">
             Newfoundlandle is my portfolio! Message me at:
             Newfoundlandle@gmail.com
