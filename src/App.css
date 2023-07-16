@@ -1,6 +1,8 @@
 :root {
   --game-max-width: 500px;
   --header-height: 40px;
+  --header-boarder-color: rgba(255, 255, 255, 0.1);
+  --game-board-square-color: rgba(255, 255, 255, 0.2);
   --keyboard-height: 200px;
   --key-bg: grey;
   --key-text-color: white;
@@ -14,7 +16,7 @@
   flex-wrap: nowrap;
   padding: 0px 16px;
   height: var(--header-height);
-  border-bottom: 1px solid #3a3a3c;
+  border-bottom: 1px solid var(--header-boarder-color);
 }
 
 .App-header-title {
@@ -133,7 +135,8 @@ button {
 .board {
   width: 75%;
   /* height: 550px; */
-  border: 1px solid black;
+  border: none;
+  /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
   height: 380px;
@@ -150,7 +153,8 @@ button {
 .letter {
   flex: 33%;
   height: 100%;
-  border: 1px solid silver;
+  border: 2px solid var(--game-board-square-color);
+  /* border: 1px solid silver; */
   margin: 5px;
   display: grid;
   place-items: center;
@@ -195,28 +199,13 @@ button {
   user-select: none;
 }
 
-.line1 {
-  /* flex: 33%; */
-  /* flex-direction: row; */
-  /* display: flex; */
-  /* justify-content: center; */
-  /* margin: 3px; */
-}
-
-.line2 {
-  /* flex: 33%; */
-  /* flex-direction: row; */
-  /* justify-content: center; */
-  /* margin: 3px; */
-}
-
-.line3 {
+/* .line1, .line2, line3 {
   flex: 33%;
-  display: flex;
   flex-direction: row;
+  display: flex;
   justify-content: center;
   margin: 3px;
-}
+} */
 
 .key {
   display: flex;
